@@ -3,65 +3,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: 'Poppins', sans-serif;
 }
 body
 {
+    background: #333;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #ff0057, #2196f3);
+    overflow: hidden;
 }
-h2
+.box
 {
     position: relative;
-    display: flex;
-    gap: 5px;
-    color: #fff;
-    font-size: 4em;
-    cursor: pointer;
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
 }
-h2 span
+.box div
 {
-    position: relative;
-    filter: blur(5px);
-    padding: 0 5px;
-    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 24s linear infinite;
 }
-h2 span:hover
+@keyframes animate
 {
-    filter: blur(0px);
-    transition: 0s;
+    0% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg)
+    }
 }
-h2 span i
+.box div span
 {
     position: absolute;
     inset: 0;
+    transform: rotateX(calc(var(--i) * 15deg));
 }
-h2 span:hover i::before
+.box div span::before
 {
-    content: '';
+    content: 'Gi Jae';
+    /*위 ''에 들어가는 글이 돈다*/
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 8px;
-    background: #fff;
-    box-shadow: 0 53px #fff,
-    36px 53px #fff,
-    36px 0 #fff;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: #fffd;
+    text-transform: uppercase;
+    font-size: 8em;
+    font-weight: 800;
+    -webkit-text-stroke: 2px #000;
+    text-shadow: 0 0 50px reba(0,0,0,0,5);
 }
-h2 span:hover i::after
-    {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 2px;
-    background: #fff;
-    box-shadow: 0 60px #fff,
-    30px 60px #fff,
-    30px 0 #fff;
+.box div span:nth-child(3n+2):before
+{
+    color: #e3f2fddd;
+}
+.box div span:nth-child(3n+3):before
+{
+    color: #fce4ecdd;
 }
