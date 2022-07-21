@@ -2,85 +2,38 @@
 <html>
     <head>
         <title>
-            CSS Text Hover Transition Effects
+            CSS 3D Text
         </title>
-        <style>
-            *
-            {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: monospace;
-            }
-            body
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                background: linear-gradient(45deg, #ff0057, #2196f3);
-            }
-            h2
-            {
-                position: relative;
-                display: flex;
-                gap: 5px;
-                color: #fff;
-                font-size: 4em;
-                cursor: pointer;
-            }
-            h2 span
-            {
-                position: relative;
-                filter: blur(5px);
-                padding: 0 5px;
-                transition: 0.5s;
-            }
-            h2 span:hover
-            {
-                filter: blur(0px);
-                transition: 0s;
-            }
-            h2 span i
-            {
-                position: absolute;
-                inset: 0;
-            }
-            h2 span:hover i::before
-            {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 2px;
-                height: 8px;
-                background: #fff;
-                box-shadow: 0 53px #fff,
-                36px 53px #fff,
-                36px 0 #fff;
-            }
-            h2 span:hover i::after
-                {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 8px;
-                height: 2px;
-                background: #fff;
-                box-shadow: 0 60px #fff,
-                30px 60px #fff,
-                30px 0 #fff;
-            } 
-        </style>
+        <link rel="stylesheet" type="text/css" href="style2.css">
     </head>
     <body>
-        <h2>
-            <span><i></i>F</span>
-            <span><i></i>O</span>
-            <span><i></i>C</span>
-            <span><i></i>U</span>
-            <span><i></i>S</span>
-        </h2>
+        <div class="box">
+            <div>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:24;"></span>
+            </div>
+        </div>
     </body>
 </html>
