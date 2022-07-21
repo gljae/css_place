@@ -46,7 +46,7 @@ body
 }
 .box div span::before
 {
-    content: 'shit';
+    content: 'handsome guy';
     /*위 ''에 들어가는 글이 돈다*/
     position: absolute;
     width: 100%;
